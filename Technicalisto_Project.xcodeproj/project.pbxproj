@@ -13,7 +13,6 @@
 		10C288F826CEEC9E000724E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10C288F626CEEC9E000724E6 /* Main.storyboard */; };
 		10C288FA26CEEC9F000724E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10C288F926CEEC9F000724E6 /* Assets.xcassets */; };
 		10C288FD26CEEC9F000724E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10C288FB26CEEC9F000724E6 /* LaunchScreen.storyboard */; };
-		10C2890526CEECAB000724E6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 10C2890426CEECAB000724E6 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		10C288F926CEEC9F000724E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10C288FC26CEEC9F000724E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10C288FE26CEEC9F000724E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		10C2890426CEECAB000724E6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +56,6 @@
 		10C288EF26CEEC9E000724E6 /* Technicalisto_Project */ = {
 			isa = PBXGroup;
 			children = (
-				10C2890426CEECAB000724E6 /* README.md */,
 				105EA15126EB84F500638DE4 /* ViewController.swift */,
 				10C288F026CEEC9E000724E6 /* AppDelegate.swift */,
 				10C288F226CEEC9E000724E6 /* SceneDelegate.swift */,
@@ -129,7 +126,6 @@
 			files = (
 				10C288FD26CEEC9F000724E6 /* LaunchScreen.storyboard in Resources */,
 				10C288FA26CEEC9F000724E6 /* Assets.xcassets in Resources */,
-				10C2890526CEECAB000724E6 /* README.md in Resources */,
 				10C288F826CEEC9E000724E6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
