@@ -203,9 +203,149 @@ if let topController = UIApplication.topViewController() {
 
 12. Add Push Notification Created Custom ** Model
 
+Example Model 
+
+```
+//-------------------------------------
+  /// We make Class [ PushModel ]
+//-------------------------------------
+import UIKit
+class PushModel: MainModel {
+  // This Get From data object not notification object
+  // notification object only get for Title & Body
+ struct DataStruct: Decodable {
+   var id:String?
+   var name:String?
+   var notificationType:String?
+   var allDetails:String?
+   var allDetailsDecode:allDetails?
+ }
+ struct allDetails:Decodable {
+   var detailsTxt:String?
+   var user:user?
+   var address:address?
+ }
+  struct user:Decodable {
+    var phone:String?
+    var rate:Double?
+    var name:String?
+  }
+  struct address:Decodable {
+    var details:String?
+    var lat:Double?
+    var lng:Double?
+  }
+}
+extension String {
+  func toJSON() -> Any? {
+    guard let data = self.data(using: .utf8, allowLossyConversion: false) else { return nil }
+    return try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+  }
+  func convertStringToObject<TD:Decodable>(ModelData:TD.Type , success: @escaping ((_ myData:TD?) ->())){
+    let encoder = JSONEncoder()
+    if let jsonData = try? encoder.encode(self) {
+      if let jsonString = String(data: jsonData, encoding: .utf8) {
+        print(jsonString)
+      }
+    }
+    do {
+      let jsonData = try JSONSerialization.data(withJSONObject: self.toJSON() as Any)
+      let itemsCollection = try JSONDecoder().decode(ModelData.self, from: jsonData)
+      success(itemsCollection)
+    }
+    catch {
+    print(error)
+    }
+  }
+}
+
+```
+
 13. To Test Download ** Advanced Rest Client ** App or any similar App 
 
+This Test Object
+
+
+```
+
+{
+“data”:{
+“priority”:“high”,
+“body”:“Push Notification Handle Model”,
+“sound”:“default”,
+“title”:“Technical Isto FCI”,
+“click_action”:“MainActivity”,
+“id”:“1”,
+“name” : “Try with Push Model”,
+“notificationType”:“1” ,
+“allDetails”:
+{
+“detailsTxt”:“Hello , we explain send firebase push notification with handle nested object and solve error decode”,
+“user”:{“name”:” Aya Baghdadi” , “phone”:“+0200000000000” , “rate”:5.0} ,
+“address”:{“details”:“Cairo , Egypt” , “lat”:30.564 , “lng”:31.546}
+}
+},
+“notification”:{
+“priority”:“high”,
+“body”:“Push Notification Handle Model”,
+“sound”:“default”,
+“title”:“Technical Isto FCI”,
+“click_action”:“MainActivity”
+},
+“to”:“your_fcm”
+}
+
+```
+
 14. Update Method to decode Nested Object ** Strings ** With method added in Model file.
+
+15. In get of userInfo Handle By :
+
+Using method added in Push Model
+
+```
+
+let userInfo = response.notification.request.content.userInfo
+
+do {
+let jsonData = try JSONSerialization.data(withJSONObject: userInfo)
+let itemsCollection = try JSONDecoder().decode(PushModel.DataStruct.self, from: jsonData)
+  
+ ///  ** Handle Here      
+
+print(itemsCollection)
+}
+atch {
+print(error)
+}
+dump(userInfo)
+
+```
+
+16. Add method HandleNotify Take ** Generic ** Model & ** completionHandler **
+
+```
+func HandleNotify(_ itemsCollection:PushModel.DataStruct, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void){
+
+var NewItem:PushModel.DataStruct! = PushModel.DataStruct()
+NewItem = itemsCollection
+
+itemsCollection.details?.convertStringToObject(ModelData: PushModel.details.self, success: { myData in
+NewItem.detailsDecode = myData
+dump(myData)
+dump(NewItem)
+})
+
+```
+
+17. Call method HandleNotify inside get of itemsCollection With : 
+
+```
+HandleNotify(itemsCollection) { UNNotificationPresentationOptions in
+            
+}
+
+```
 
 ### Thanks
 
