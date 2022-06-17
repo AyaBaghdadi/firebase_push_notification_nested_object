@@ -3,6 +3,11 @@
 
 ## Handle Nested object get from Firebase Push Notification " Object inside object "
 
+** Note : for easy understand firstly read this file ** once ** 
+       & follow steps in new project from this [Read Me File](https://github.com/AyaBaghdadi/firebase_push_notification_nested_object) file or from this [Video]()
+       Maybe you need to run in physical device ** Iphone ** so you need to create certificate with apple developer account , so you can watch this [Playlist Certificate for Apple Store & Firebase](https://www.youtube.com/watch?v=svkVOWdMVBA&list=PL4j2Hq_b76xKC3s6oDDEVdxBMYt54q6SL) , it's also useful for upload to apple store 
+       If you need to Handle push notification but in Local ** Not ** from fire base with background tasks Watch this [Local Push Notification](https://youtu.be/dUTFQIUF0Rk)
+
 1. Create Your Project In Firebase & Download google-service.plist & Add it in Your project Root.
 
    link of [Firebase](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwixxOCyo7T4AhULif0HHUPUBr8QFnoECA0QAQ&url=https%3A%2F%2Ffirebase.google.com%2F&usg=AOvVaw3fzCjfkgyYXdUPCdS8VWFg)
@@ -63,6 +68,7 @@ application.registerForRemoteNotifications()
 // End Push Notification
         
 ```
+
 
 6. Define gcmMessageIDKey as to use in the following added methods 
 
