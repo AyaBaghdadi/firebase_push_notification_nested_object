@@ -275,6 +275,8 @@ extension String {
 
 13. To Test Download ** Advanced Rest Client ** App or any similar App 
 
+You can download from this link [Advanced Rest Client](https://install.advancedrestclient.com/install) 
+
 This Test Object
 
 
