@@ -7,6 +7,9 @@ Note : for easy understand firstly read this file ** once **
        & follow steps in new project from this [Read Me File](https://github.com/AyaBaghdadi/firebase_push_notification_nested_object) file or from this [Video]()
        Maybe you need to run in physical device ** Iphone ** so you need to create certificate with apple developer account , so you can watch this [Playlist Certificate for Apple Store & Firebase](https://www.youtube.com/watch?v=svkVOWdMVBA&list=PL4j2Hq_b76xKC3s6oDDEVdxBMYt54q6SL) , it's also useful for upload to apple store 
        If you need to Handle push notification but in Local ** Not ** from fire base with background tasks Watch this [Local Push Notification](https://youtu.be/dUTFQIUF0Rk)
+   
+       
+## Let's Start 
 
 1. Create Your Project In Firebase & Download google-service.plist & Add it in Your project Root.
 
