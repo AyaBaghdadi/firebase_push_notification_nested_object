@@ -349,10 +349,13 @@ func HandleNotify(_ itemsCollection:PushModel.DataStruct, withCompletionHandler 
 var NewItem:PushModel.DataStruct! = PushModel.DataStruct()
 NewItem = itemsCollection
 
-itemsCollection.details?.convertStringToObject(ModelData: PushModel.details.self, success: { myData in
-NewItem.detailsDecode = myData
+itemsCollection.allDetails?.convertStringToObject(ModelData: PushModel.allDetails.self, success: { myData in
+NewItem.allDetailsDecode = myData
 dump(myData)
 dump(NewItem)
+print(NewItem.allDetailsDecode?.user?.name)
+completionHandler([.alert,.badge, .sound])
+
 })
 
 ```

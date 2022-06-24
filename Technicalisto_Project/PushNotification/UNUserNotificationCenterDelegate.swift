@@ -60,7 +60,7 @@ completionHandler()
     NewItem.allDetailsDecode = myData
     dump(myData)
     dump(NewItem)
-        print(NewItem.allDetailsDecode?.user?.name)
+    print(NewItem.allDetailsDecode?.user?.name)
     completionHandler([.alert,.badge, .sound])
     })
 
