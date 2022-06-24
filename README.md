@@ -180,7 +180,7 @@ extension AppDelegate : MessagingDelegate {
 
 ```
 
-10. Run & Try to send to iPhone from firebase with Fcm generated from Application ** Successfully
+10. Connect with Account & Run & Try to send to iPhone from firebase with Fcm generated from Application ** Successfully
 
 11. Add Extenstion for UIApplication with function topViewController to get ** Top View Controller 
 
@@ -276,6 +276,11 @@ extension String {
 13. To Test Download ** Advanced Rest Client ** App or any similar App 
 
 You can download from this link [Advanced Rest Client](https://install.advancedrestclient.com/install) 
+
+Note : 
+Add 
+content-type -> application/json
+authorization -> key=Your_Key
 
 This Test Object
 
