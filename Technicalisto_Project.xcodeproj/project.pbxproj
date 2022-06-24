@@ -392,13 +392,13 @@
 				CODE_SIGN_ENTITLEMENTS = Technicalisto_Project/Technicalisto_Project.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NZY88V54F5;
+				DEVELOPMENT_TEAM = 6XPAD84TNT;
 				INFOPLIST_FILE = Technicalisto_Project/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.orial.azoozstore;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Technicalisto.tech-project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -415,13 +415,13 @@
 				CODE_SIGN_ENTITLEMENTS = Technicalisto_Project/Technicalisto_Project.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NZY88V54F5;
+				DEVELOPMENT_TEAM = 6XPAD84TNT;
 				INFOPLIST_FILE = Technicalisto_Project/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.orial.azoozstore;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Technicalisto.tech-project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
