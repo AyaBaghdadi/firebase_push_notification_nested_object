@@ -279,6 +279,7 @@ You can download from this link [Advanced Rest Client](https://install.advancedr
 
 Note : 
 Add 
+Url -> https://fcm.googleapis.com/fcm/send
 content-type -> application/json
 authorization -> key=Your_Key
 
@@ -286,32 +287,31 @@ This Test Object
 
 
 ```
-
 {
-“data”:{
-“priority”:“high”,
-“body”:“Push Notification Handle Model”,
-“sound”:“default”,
-“title”:“Technical Isto FCI”,
-“click_action”:“MainActivity”,
-“id”:“1”,
-“name” : “Try with Push Model”,
-“notificationType”:“1” ,
-“allDetails”:
+"data":{
+"priority":"high",
+"body":"Push Notification Handle Model",
+"sound":"default",
+"title":"Technical Isto FCI",
+"click_action":"MainActivity",
+"id":"1",
+"name" : "Try with Push Model",
+"notificationType":"1" ,
+"allDetails":
 {
-“detailsTxt”:“Hello , we explain send firebase push notification with handle nested object and solve error decode”,
-“user”:{“name”:” Aya Baghdadi” , “phone”:“+0200000000000” , “rate”:5.0} ,
-“address”:{“details”:“Cairo , Egypt” , “lat”:30.564 , “lng”:31.546}
+"detailsTxt":"Hello , we explain send firebase push notification with handle nested object and solve error decode",
+"user":{"name":" Aya Baghdadi" , "phone":"+0200000000000" , "rate":5.0} ,
+"address":{"details":"Cairo , Egypt" , "lat":30.564 , "lng":31.546}
 }
 },
-“notification”:{
-“priority”:“high”,
-“body”:“Push Notification Handle Model”,
-“sound”:“default”,
-“title”:“Technical Isto FCI”,
-“click_action”:“MainActivity”
+"notification":{
+"priority":"high",
+"body":"Push Notification Handle Model",
+"sound":"default",
+"title":"Technical Isto FCI",
+"click_action":"MainActivity"
 },
-“to”:“your_fcm”
+"to":"your_fcm"
 }
 
 ```
