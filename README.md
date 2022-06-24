@@ -334,7 +334,7 @@ let itemsCollection = try JSONDecoder().decode(PushModel.DataStruct.self, from: 
 
 print(itemsCollection)
 }
-atch {
+catch {
 print(error)
 }
 dump(userInfo)
