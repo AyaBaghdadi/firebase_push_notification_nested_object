@@ -128,6 +128,10 @@ Messaging.messaging().setAPNSToken(deviceToken as Data, type: .unknown)
 8. Add Extension for AppDelegate inhirit ** UNUserNotificationCenterDelegate ** with Methods userNotificationCenter 
 
 ```
+
+import Foundation
+import UIKit
+
 // [START ios_10_message_handling]
 @available(iOS 10, *)
 extension AppDelegate : UNUserNotificationCenterDelegate {
@@ -159,23 +163,23 @@ completionHandler()
 9. Add Extension for AppDelegate inhirit ** MessagingDelegate ** with Methods messaging
 
 ```
+import Foundation
+import UIKit
+import UserNotifications
+import FirebaseMessaging
+
 // [END ios_10_message_handling]
 extension AppDelegate : MessagingDelegate {
-    // [START refresh_token]
-    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
-        print("Firebase registration token: \(fcmToken)")
-        UserDefaults.standard.set(fcmToken, forKey: "fcm_token")
-        let dataDict:[String: String] = ["token": fcmToken]
-        
-        NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
-
-    }
-
-    func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
-        print("Received data message: \(remoteMessage.appData)")
-
-    }
     
+// [START refresh_token]
+func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+print("Firebase registration token: \(fcmToken ?? "Not_Get_FCM_Yet")")
+UserDefaults.standard.set(fcmToken, forKey: "fcm_token")
+let dataDict:[String: String] = ["token": fcmToken!]
+        
+NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
+
+}
 }
 
 ```
